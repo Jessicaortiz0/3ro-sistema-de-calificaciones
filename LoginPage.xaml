@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaCalificaciones.LoginPage"
+             Title="Inicio de Sesión">
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label Text="Bienvenido al Sistema" FontSize="28" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Label Text="Usuario:" FontAttributes="Bold" />
+        <Entry x:Name="txtUsuario" Placeholder="Ingrese su usuario" />
+
+        <Label Text="Contraseña:" FontAttributes="Bold" />
+        <Entry x:Name="txtPassword" IsPassword="True" Placeholder="Ingrese su contraseña" />
+
+        <Button Text="Ingresar" Clicked="OnIngresarClicked" BackgroundColor="#4CAF50" TextColor="White" FontAttributes="Bold" CornerRadius="8" Margin="0,20,0,0"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

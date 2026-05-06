@@ -4,9 +4,27 @@ namespace SistemaCalificaciones
 {
     public partial class MainPage : ContentPage
     {
+        private string _usuarioConectado = "";
+
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        public MainPage(string usuario)
+        {
+            InitializeComponent();
+            _usuarioConectado = usuario;
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            if (!string.IsNullOrEmpty(_usuarioConectado))
+            {
+                await DisplayAlert("Bienvenido", $"Bienvenido al sistema, {_usuarioConectado}", "OK");
+                _usuarioConectado = ""; // Lo limpiamos para que no vuelva a aparecer al minimizar y maximizar
+            }
         }
 
         private async void OnCalcularClicked(object? sender, EventArgs e)
