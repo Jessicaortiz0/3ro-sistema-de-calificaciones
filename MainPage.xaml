@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaCalificaciones.MainPage"
+             Title="Sistema de Calificaciones">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="15">
+
+            <Label Text="Sistema de Calificaciones" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <!-- Estudiante -->
+            <Label Text="Estudiante:" FontAttributes="Bold"/>
+            <Picker x:Name="pckEstudiante" Title="Seleccione un estudiante">
+                <Picker.Items>
+                    <x:String>Juan Pérez</x:String>
+                    <x:String>María Gómez</x:String>
+                    <x:String>Carlos López</x:String>
+                    <x:String>Ana Martínez</x:String>
+                    <x:String>Luis Rodríguez</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Fecha -->
+            <Label Text="Fecha:" FontAttributes="Bold"/>
+            <DatePicker x:Name="dtpFecha" />
+
+            <BoxView HeightRequest="1" Color="Gray" Margin="0,10,0,10"/>
+
+            <!-- Parcial 1 -->
+            <Label Text="Parcial 1" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Nota Seguimiento 1 (0 - 10):" />
+            <Entry x:Name="txtSeguimiento1" Keyboard="Numeric" Placeholder="Ingrese la nota de seguimiento" />
+
+            <Label Text="Examen 1 (0 - 10):" />
+            <Entry x:Name="txtExamen1" Keyboard="Numeric" Placeholder="Ingrese la nota del examen" />
+
+            <BoxView HeightRequest="1" Color="Gray" Margin="0,10,0,10"/>
+
+            <!-- Parcial 2 -->
+            <Label Text="Parcial 2" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Nota Seguimiento 2 (0 - 10):" />
+            <Entry x:Name="txtSeguimiento2" Keyboard="Numeric" Placeholder="Ingrese la nota de seguimiento" />
+
+            <Label Text="Examen 2 (0 - 10):" />
+            <Entry x:Name="txtExamen2" Keyboard="Numeric" Placeholder="Ingrese la nota del examen" />
+
+            <BoxView HeightRequest="1" Color="Gray" Margin="0,10,0,10"/>
+
+            <!-- Botones -->
+            <Button Text="Calcular" Clicked="OnCalcularClicked" BackgroundColor="#2196F3" TextColor="White" FontAttributes="Bold" CornerRadius="8" />
+            <Button Text="Limpiar" Clicked="OnLimpiarClicked" BackgroundColor="#F44336" TextColor="White" FontAttributes="Bold" CornerRadius="8" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
